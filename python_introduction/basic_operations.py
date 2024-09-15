@@ -1,7 +1,7 @@
-number1 = 5;
-number2 = 10;
+number1 = 10;
+number2 = 5;
 sum_result = number1 + number2;
-Subtraction_result = number2 - number1;
+Subtraction_result = number1 - number2;
 Multiplication_result = number1 * number2;
 
 print(f"Addition of {number1} and {number2} is {sum_result}");
