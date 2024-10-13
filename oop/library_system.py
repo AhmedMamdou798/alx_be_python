@@ -13,6 +13,15 @@ class Book:
     self.title = title
     self.author = author
 
+  def __str__(self):
+    """
+    Returns a string representation of the book in a basic format.
+
+    Returns:
+      str: A string representation of the book in the format "(title) by (author)"
+    """
+    return f"{self.title} by {self.author}"
+
 class EBook(Book):
   """
   This class represents an Ebook derived from the Book class.
@@ -45,6 +54,16 @@ class PrintBook(Book):
     super().__init__(title, author)  # Call base class constructor
     self.page_count = page_count
 
+  def __str__(self):
+    """
+    Returns a string representation of the PrintBook.
+
+    Returns:
+      str: A string representation of the PrintBook in the format
+           "(title) by (author), Page Count: (page_count)"
+    """
+    return f"{self.title} by {self.author}, Page Count: {self.page_count}"
+
 class Library:
   """
   This class represents a Library that manages a collection of books.
@@ -73,6 +92,6 @@ class Library:
       if isinstance(book, EBook):
         print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
       elif isinstance(book, PrintBook):
-        print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+        print(book)  # Use the __str__ method of PrintBook
       else:
-        print(f"Book: {book.title} by {book.author}")
+        print(book)  # Use the __str__ method of Book
