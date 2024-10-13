@@ -54,7 +54,7 @@ class Circle(Shape):
     Returns:
       float: The area of the circle (pi * radius^2).
     """
-    return pi * self.radius**2
+    return pi * self.radius** 2
 
 # This part is for testing purposes and not included in polymorphism_demo.py
 if __name__ == "__main__":
