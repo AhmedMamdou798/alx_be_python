@@ -1,19 +1,22 @@
 # arithmetic_operations.py
 
 def perform_operation(num1, num2, operation):
+    num1 = float(num1)
+    num2 = float(num2)
     if operation == 'add':
-        return float(num1) + float(num2)
+        result = num1 + num2
     elif operation == 'subtract':
-        return float(num1) - float(num2)
+        result = num1 - num2
     elif operation == 'multiply':
-        return float(num1) * float(num2)
+        result = num1 * num2
     elif operation == 'divide':
-        if float(num2) == 0:
+        if num2 == 0:
             return "Error: Division by zero"
         else:
-            return float(num1) / float(num2)
+            result = num1 / num2
     else:
         return "Error: Invalid operation"
+    return result
 
 if __name__ == "__main__":
     # This block will only execute if this script is run directly
